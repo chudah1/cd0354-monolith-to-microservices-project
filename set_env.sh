@@ -1,11 +1,10 @@
-# This file is used for convenience of local development.
-# DO NOT STORE YOUR CREDENTIALS INTO GIT
-export POSTGRES_USERNAME=postgres
-export POSTGRES_PASSWORD=mypassword
-export POSTGRES_HOST=postgres.cr9bldgsf1j6.us-east-1.rds.amazonaws.com
-export POSTGRES_DB=postgres
-export AWS_BUCKET=arn:aws:s3:::mybucket1200798
-export AWS_REGION=us-east-1
-export AWS_PROFILE=default
-export JWT_SECRET=testing
-export URL=http://localhost:8100
+
+setx POSTGRES_USERNAME "udagramdev"
+setx POSTGRES_PASSWORD "udagramdev"
+setx POSTGRES_DATABASE "postgres"
+setx POSTGRES_HOST "udagramdev.c2xpjlmjabfh.us-east-1.rds.amazonaws.com"
+setx AWS_REGION "us-east-1"
+setx AWS_MEDIA_BUCKET "udagram-refactor-dev"
+setx AWS_PROFILE "default"
+setx URL "http://localhost:8000"
+setx JWT_SECRET "chudahdev"

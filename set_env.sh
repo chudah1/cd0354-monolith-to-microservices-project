@@ -1,7 +1,7 @@
 
 setx POSTGRES_USERNAME "udagramdev"
 setx POSTGRES_PASSWORD "udagramdev"
-setx POSTGRES_DATABASE "postgres"
+setx POSTGRES_DATABASE "udagramdev"
 setx POSTGRES_HOST "udagramdev.c2xpjlmjabfh.us-east-1.rds.amazonaws.com"
 setx AWS_REGION "us-east-1"
 setx AWS_MEDIA_BUCKET "udagram-refactor-dev"

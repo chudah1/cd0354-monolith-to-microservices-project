@@ -17,7 +17,10 @@ jobs:
               docker --version
               docker login -u $DOCKER_LOGIN -p=$DOCKER_PASSWORD
               docker-compose -f docker-compose-build.yaml build --parallel
-              docker push <docker_account>/<application_name>:$CIRCLE_BRANCH
+              docker push chudah/udagram-frontend:latest
+              docker push chudah/udagram-api-feed:latest
+              docker push chudah/udagram-api-user:latest
+              docker push chudah/udagram-reverseproxy:latest
               echo "Docker build made sucessfully!! for <application_name> $CIRCLE_BRANCH"
       - run:
             name: Build Failure

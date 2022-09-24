@@ -17,7 +17,7 @@ jobs:
               docker --version
               docker login -u $DOCKER_LOGIN -p=$DOCKER_PASSWORD
              
-              docker-compose -f docker-compose-build.yaml build --parallel
+              docker-compose -f docker-compose-build.yaml build
               docker push chudah/udagram-frontend:$CIRCLE_BRANCH
               docker push chudah/udagram-api-feed:$CIRCLE_BRANCH
               docker push chudah/udagram-api-user:$CIRCLE_BRANCH

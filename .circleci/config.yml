@@ -21,12 +21,12 @@ jobs:
               docker push chudah/udagram-api-feed:latest
               docker push chudah/udagram-api-user:latest
               docker push chudah/udagram-reverseproxy:latest
-              echo "Docker build made sucessfully!! for <application_name> $CIRCLE_BRANCH"
+              echo "Docker build made sucessfully!!"
       - run:
             name: Build Failure
             when: on_fail
             command: |
-              echo "ERROR building <application_name> $CIRCLE_BRANCH"
+              echo "ERROR building"
 
 
 

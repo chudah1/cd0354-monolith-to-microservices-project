@@ -16,11 +16,8 @@ jobs:
           command: |
               docker --version
               docker login -u $DOCKER_LOGIN -p=$DOCKER_PASSWORD
-              docker build -t chudah/udagram-frontend:$CIRCLE_BRANCH --build-arg MACHINE_NAME=udagram-frontend-$CIRCLE_BRANCH .
-              docker build -t chudah/udagram-api-feed:$CIRCLE_BRANCH --build-arg MACHINE_NAME=udagram-api-feed-$CIRCLE_BRANCH .
-              docker build -t chudah/udagram-api-user:$CIRCLE_BRANCH --build-arg MACHINE_NAME=udagram-api-user-$CIRCLE_BRANCH .
-              docker build -t chudah/udagram-rverseproxy:$CIRCLE_BRANCH --build-arg MACHINE_NAME=udagram-reverseproxy-$CIRCLE_BRANCH .
-              
+             
+              docker-compose -f docker-compose-build.yaml build --parallel
               docker push chudah/udagram-frontend:$CIRCLE_BRANCH
               docker push chudah/udagram-api-feed:$CIRCLE_BRANCH
               docker push chudah/udagram-api-user:$CIRCLE_BRANCH
